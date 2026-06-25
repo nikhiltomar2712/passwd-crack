@@ -26,3 +26,15 @@ This software is for **EDUCATIONAL PURPOSES ONLY**. You must have explicit writt
 mkdir build && cd build
 cmake ..
 make -j4
+
+# Dictionary attack
+./PasswordCracker -a dictionary -w wordlists/rockyou.txt -H md5 -t hashes.txt
+
+# Brute force with mask
+./PasswordCracker -a bruteforce -m "?l?l?l?l?d?d" -H sha256 -t hashes.txt
+
+# Password analysis
+./PasswordCracker --analyze -p "MyP@ssw0rd!" --detailed-report
+
+# Resume session
+./PasswordCracker --restore sessions/session_20260101.json
