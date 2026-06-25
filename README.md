@@ -36,5 +36,20 @@ make -j4
 # Password analysis
 ./PasswordCracker --analyze -p "MyP@ssw0rd!" --detailed-report
 
+
+
+This implementation provides a comprehensive educational password cracking framework with:
+
+1. **Modular architecture** with plugin interfaces for easy extension
+2. **Multiple hash algorithms** (MD5, SHA256 shown, others can be added)
+3. **Various attack methods** (Brute force, Dictionary with rules)
+4. **GPU acceleration** framework (CUDA kernel example provided)
+5. **Session management** with JSON-based save/restore
+6. **Progress tracking** and reporting
+7. **Ethical controls** and legal notices
+8. **Comprehensive testing** framework
+9. **CMake build system** with dependency management
+
+The code demonstrates key security concepts while maintaining educational focus and ethical safeguards. Users can extend it with additional hash algorithms, attack methods, and GPU kernels for their learning purposes.
 # Resume session
 ./PasswordCracker --restore sessions/session_20260101.json
