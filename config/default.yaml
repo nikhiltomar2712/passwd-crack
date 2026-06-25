@@ -1,0 +1,26 @@
+# config/default.yaml
+general:
+  cpu_threads: 4
+  temperature_limit: 85
+  gpu_enabled: false
+  log_level: 1  # INFO
+  
+attack:
+  type: dictionary
+  charset: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+  min_length: 1
+  max_length: 8
+  dictionaries:
+    - path: "wordlists/rockyou.txt"
+      priority: 1
+  rules:
+    - "rules/best64.rule"
+    
+output:
+  format: json
+  auto_save_interval: 300  # seconds
+  session_dir: "sessions/"
+  
+performance:
+  batch_size: 1000
+  gpu_workload_ratio: 0.8  # 80% GPU, 20% CPU
